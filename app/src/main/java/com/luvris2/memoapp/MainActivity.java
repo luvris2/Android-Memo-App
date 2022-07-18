@@ -68,6 +68,32 @@ public class MainActivity extends AppCompatActivity {
 
             recyclerView.setAdapter(adapter);
         });
+        /*
+        // 검색어 실시간 검색
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                String keyword = editSearch.getText().toString().trim();
+
+                DatabaseHandler db = new DatabaseHandler(MainActivity.this);
+                memoList = db.searchMemo(keyword);
+
+                // 검색 결과 출력
+                adapter = new MemoAdapter(MainActivity.this, memoList);
+                recyclerView.setAdapter(adapter);
+            }
+        });
+        */
     }
 
     @Override
